@@ -1,0 +1,30 @@
+
+# Generate log file name with current timestamp
+LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+
+# Define the path for the logs directory
+logs_dir = os.path.join(os.getcwd(), "logs")
+
+# Ensure the logs directory exists
+os.makedirs(logs_dir, exist_ok=True)
+
+# Full path to the log file
+LOG_FILE_PATH = os.path.join(logs_dir, LOG_FILE)
+
+# Configure logging
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO,
+)
+
+# Example logging messages
+if __name__ == "__main__":
+    logging.info("Logging has started")
+    logging.debug("This is a debug message")
+    logging.warning("This is a warning message")
+    logging.error("This is an error message")
+    logging.critical("This is a critical message")
+
+
+
