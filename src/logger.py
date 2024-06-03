@@ -1,3 +1,6 @@
+import logging
+import os
+from datetime import datetime
 
 # Generate log file name with current timestamp
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
@@ -25,6 +28,5 @@ if __name__ == "__main__":
     logging.warning("This is a warning message")
     logging.error("This is an error message")
     logging.critical("This is a critical message")
-
 
 

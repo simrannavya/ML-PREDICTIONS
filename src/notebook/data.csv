@@ -1,0 +1,17 @@
+import csv
+
+# Specify the file path and name
+file_path = '/Users/dhruv.b/Downloads/dhruv.csv'
+
+
+# Open the file in write mode
+with open(file_path, 'w', newline='') as file:
+    writer = csv.writer(file)
+
+    # Write the header row
+    writer.writerow(['Column1', 'Column2', 'Column3'])  # Replace with your column names
+
+    # Write the data rows
+    writer.writerow(['Value1', 'Value2', 'Value3'])  # Replace with your data values
+    writer.writerow(['Value4', 'Value5', 'Value6'])  # Replace with your data values
+    # Add more rows as needed
